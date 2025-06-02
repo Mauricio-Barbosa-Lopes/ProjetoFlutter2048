@@ -10,6 +10,37 @@ class MyApp extends StatelessWidget {
   // This widget is the root of your application.
   @override
   Widget build(BuildContext context) {
+    String modojogo = "facil";
+    List<List<int>> tabuleiroJogo;
+    if(modojogo == "facil"){
+      tabuleiroJogo = [[0,0,0,0],
+                       [0,0,1,0],
+                       [0,0,0,0],
+                       [0,0,0,0]];
+
+    }
+    else{
+      tabuleiroJogo = [[0,0,0,0],
+        [0,0,1,0],
+        [0,0,0,0],
+        [0,0,0,0]];
+    }
+
+    //da esquerda pra direira
+    tabuleiroJogo[1][3] = tabuleiroJogo[1][2];
+    tabuleiroJogo[1][2] = tabuleiroJogo[1][1];
+    tabuleiroJogo[1][1] = tabuleiroJogo[1][0];
+    tabuleiroJogo[1][0] = 0;
+
+
+    //colunas = Column(children:,)
+    //linhas = Row(children:,)
+    //texto = Text()
+    //botoes = TextButton(onPressed:(){},child:,)
+    //containers = Container(child:,)
+
+
+
     return MaterialApp(
       title: 'Flutter Demo',
       theme: ThemeData(
